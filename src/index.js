@@ -16,6 +16,7 @@ const api = new API(rest);
 const ws = new WebSocketManager({
     token: config.bot.token,
     intents: 
+    GatewayIntentBits.GuildPresences |
     GatewayIntentBits.Guilds |
     GatewayIntentBits.GuildMessages |
     GatewayIntentBits.GuildMembers,
