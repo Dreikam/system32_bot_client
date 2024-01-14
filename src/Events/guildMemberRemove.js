@@ -9,13 +9,12 @@ module.exports = {
             guildId: data.guild_id
         }
 
-        console.log(removedUser);
         try {
             const { data } = await axios.delete(`/guilds/${removedUser.guildId}/members/remove`, {data: removedUser});
       
             console.log(data);
-          } catch ({response: {data}}) {
-            console.log(data);
+          } catch (error) {
+            console.log(error.response.data);
           }
     }
 }
