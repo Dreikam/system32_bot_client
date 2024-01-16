@@ -26,8 +26,8 @@ module.exports = {
       const { data } = await axios.post("/guilds", guildData);
 
       console.log(data);
-    } catch ({response: {data}}) {
-      console.log(data);
+    } catch (error) {
+      console.log(error.response.data);
     }
   },
 };
